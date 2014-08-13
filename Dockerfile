@@ -10,6 +10,7 @@ RUN \
   apt-get clean && \
   apt-get autoclean && \
   apt-get autoremove && \
-  rm /var/lib/apt/lists/*_*
+  rm /var/lib/apt/lists/*_* && \
+  rm -Rf /build
 
 CMD supervisord -n -c /etc/supervisor/supervisord.conf
