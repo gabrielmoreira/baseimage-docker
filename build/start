@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "--" ]
+then
+	envdir /env supervisord -n -c /etc/supervisor/supervisord.conf &
+	shift
+	envdir /env $@
+else
+	envdir /env supervisord -n -c /etc/supervisor/supervisord.conf 	
+fi
