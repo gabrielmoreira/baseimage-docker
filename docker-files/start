@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+mkdir -p /var/log/supervisor
+
 if [ "$1" = "--" ]
 then
 	envdir /env supervisord -n -c /etc/supervisor/supervisord.conf &

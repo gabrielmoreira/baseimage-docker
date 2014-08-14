@@ -3,7 +3,7 @@ MAINTAINER gabrielmoreira@gmail.com
 
 ENV HOME /root
 
-ADD build /build
+ADD docker-files /build
 
 RUN \
   apt-get update && \
